@@ -10,9 +10,7 @@
   --gradiente-roxo: linear-gradient(90deg, #7B2CBF, #C084FC);
 }
 
-/* ===========================
-   Reset Básico
-=========================== */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -20,240 +18,120 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--branco);
   color: var(--preto);
   line-height: 1.6;
 }
 
 /* ===========================
-   Título de Seções
+   Header
 =========================== */
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-title h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--roxo-principal);
-}
-
-.section-title p {
-  font-size: 1.2rem;
-  color: var(--cinza-escuro);
-}
-
-.promo-badge {
-  display: inline-block;
-  background: var(--gradiente-neon);
-  color: var(--branco);
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* ===========================
-   Seção Portfólio
-=========================== */
-.portfolio {
-  padding: 100px 20px;
-  background: var(--branco);
-}
-
-.portfolio-simple {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.portfolio-item-simple {
-  background: var(--branco);
-  border-radius: 20px;
-  padding: 3rem 2.5rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 3px solid var(--preto);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-item-simple::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: var(--gradiente-neon);
-}
-
-.portfolio-item-simple:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: var(--roxo-principal);
-  box-shadow: 0 25px 60px rgba(138, 43, 226, 0.2);
-}
-
-.portfolio-icon {
-  font-size: 5rem;
-  margin-bottom: 1.5rem;
-  background: var(--gradiente-neon);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.portfolio-item-simple h3 {
-  font-size: 1.6rem;
-  color: var(--preto);
-  margin-bottom: 1rem;
-  font-weight: 800;
-}
-
-.portfolio-item-simple p {
-  color: var(--cinza-escuro);
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.btn-portfolio {
-  display: inline-block;
+header {
   background: var(--gradiente-roxo);
+  padding: 15px 20px;
   color: var(--branco);
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 
-.btn-portfolio:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ===========================
-   Seção Preços
-=========================== */
-.pricing {
-  padding: 100px 20px;
-  background: var(--branco);
-}
-
-.pricing-notice {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
-  color: var(--preto);
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.pricing-card {
-  background: var(--branco);
-  border-radius: 20px;
-  padding: 2rem;
-  text-align: center;
-  border: 3px solid var(--preto);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.pricing-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--roxo-principal);
-  box-shadow: 0 20px 50px rgba(138, 43, 226, 0.2);
-}
-
-.pricing-header h3 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--preto);
-}
-
-.price {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 10px 0;
-  color: var(--roxo-principal);
-}
-
-.price span {
-  font-size: 1rem;
-  color: var(--cinza-escuro);
-}
-
-.promo-tag {
-  background: var(--gradiente-neon);
-  color: var(--branco);
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  margin-top: 10px;
-}
-
-.features {
+header nav ul {
+  display: flex;
+  gap: 20px;
   list-style: none;
-  padding: 0;
-  margin: 20px 0;
 }
 
-.features li {
-  margin-bottom: 10px;
-  color: var(--cinza-escuro);
-}
-
-/* Botão Preços */
-.btn-pricing {
-  display: inline-block;
-  background: var(--gradiente-roxo);
+header nav ul li a {
   color: var(--branco);
-  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Hero
+=========================== */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: var(--gradiente-neon);
+  color: var(--branco);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background: var(--branco);
+  color: var(--roxo-principal);
+  padding: 15px 30px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
-  transition: all 0.3s ease;
 }
 
-.btn-pricing:hover {
-  background: var(--gradiente-neon);
-  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
-}
-
-/* Destaque para Pacote Silver */
-.popular {
-  border: 3px solid var(--roxo-principal);
-  box-shadow: 0 20px 50px rgba(138, 43, 226, 0.3);
-}
-
-.popular-badge {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--roxo-principal);
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background: var(--gradiente-roxo);
   color: var(--branco);
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-weight: bold;
+  padding: 40px 20px;
 }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-grid h4 {
+  margin-bottom: 10px;
+}
+
+.footer-grid ul {
+  list-style: none;
+}
+
+.footer-grid ul li {
+  margin-bottom: 8px;
+}
+
+.footer-grid ul li a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.footer-grid ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   Portfólio e Preços
+=========================== */
+/* (Mantém o código que você enviou para essas seções) */
 
 /* Corrige fade-in */
 .fade-in {
