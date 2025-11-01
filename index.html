@@ -1,152 +1,387 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raiza Digital - Marketing & Desenvolvimento Web</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=00;500;600;700&display=swap
-  style.css
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raiza Digital - Marketing & Desenvolvimento Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">🌱</span>
+                <span>Raiza Digital</span>
+            </a>
+            <button class="mobile-menu">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#pricing">Preços</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- Header -->
-<header>
-  <div class="header-container">
-    <a href="#home" class="logo">Raiza     <ul>
-        <li>#homeInício</a></li>
-        <li>#aboutSobre</a></li>
-        <li>#servicesServiços</a></li>
-        <li><a href="#portfolio</a></li>
-        <li>#pricingPreços</a></li>
-        <li>#contactContato</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511910189735?text=Olá! Gostaria de saber mais sobre os serviços da Raiza Digital" class="whatsapp-btn pulsante" target="_blank">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNDEsMjU2YTQxLDQxLDAsMSwxLDQxLDQxQTQxLDQxLDAsMCwxLDQxLDI1NloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxNCAyMTQpIi8+PHBhdGggZmlsbD0iIzI1QzY1NCIgZD0iTTQ0Ny43LDY0LjNhMzg0LjEsMzg0LjEsMCwwLDAtNTQzLjksNTQ0QTM4NC4xLDM4NC4xLDAsMCwwLDQ0Ny43LDY0LjNaTTI1Niw0NDhhMTkyLDE5yLDAsMSwxLDE5Mi0xOTJBMTE5LjEsMTE5LjEsMCwwLDEsMjU2LDQ0OFoiLz48cGF0aCBmaWxsPSIjMjVDNjU0IiBkPSJNMzQ1LjQsMzAyLjFjLTYuMiw2LjItMTQuNCw5LjMtMjIuNiw5LjNzLTE2LjQtMy4xLTIyLjYtOS4zbC0yMS4zLTIxLjNjLTIuNS0yLjUtNi42LTIuNS05LjEsMGwtMTIuOCwxMi44Yy0xMi41LDEyLjUtMzIuOCwxMi41LTQ1LjMsMGwtMi4zLTIuM2MtNi4yLTYuMi0xNi40LTYuMi0yMi42LDBzLTYuMiwxNi40LDAsMjIuNmwyLjMsMi4zYzE4LjcsMTguNyw0My45LDI5LjMsNzAuNCwyOS4zczUxLjctMTAuNiw3MC40LTI5LjNsODUuMS04NS4xYzYuMi02LjIsNi4yLTE2LjQsMC0yMi42UzM1MS42LDI5NS45LDM0NS40LDMwMi4xWiIvPjwvc3ZnPg==" alt="WhatsApp">
+    </a>
 
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="container">
-    <h1>Cultivamos sua presença digital desde a raiz</h1>
-    <p>Crescimento enraizado no digital para marcas que querem florescer com autenticidade e planejamento.</p>
-    #pricingVer Planos</a>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="fade-in">Cultivamos sua presença digital desde a raiz</h1>
+            <p class="fade-in">Crescimento enraizado no digital para marcas que querem florescer com autenticidade e planejamento.</p>
+            <a href="#pricing" class="btn fade-in">Ver Planos</a>
+        </div>
+    </section>
 
-<!-- Sobre -->
-<section class="about" id="about">
-  <div class="container">
-    <h2>Sobre a Raiza Digital</h2>
-    <p>Assim como uma raiz forte sustenta uma árvore, nossa empresa fornece as bases digitais necessárias para o crescimento sustentável do seu negócio.</p>
-    <p>Combinamos criatividade e estratégia para desenvolver soluções digitais que não apenas impressionam visualmente, mas também geram resultados tangíveis e duradouros.</p>
-  </div>
-</section>
+    <!-- Sobre -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="fade-in">Sobre a Raiza Digital</h2>
+                    <p class="fade-in">Assim como uma raiz forte sustenta uma árvore, nossa empresa fornece as bases digitais necessárias para o crescimento sustentável do seu negócio.</p>
+                    <p class="fade-in">Combinamos criatividade e estratégia para desenvolver soluções digitais que não apenas impressionam visualmente, mas também geram resultados tangíveis e duradouros.</p>
+                    
+                    <div class="values-list">
+                        <h3 class="fade-in">Por que escolher a Raiza Digital?</h3>
+                        <div class="value-item fade-in">
+                            <span class="value-icon">🎯</span>
+                            <div>
+                                <h4>Estratégia Personalizada</h4>
+                                <p>Cada projeto é único e desenvolvido especificamente para o seu negócio e público-alvo.</p>
+                            </div>
+                        </div>
+                        <div class="value-item fade-in">
+                            <span class="value-icon">💜</span>
+                            <div>
+                                <h4>Preços Acessíveis</h4>
+                                <p>Oferecemos soluções de alta qualidade que cabem no seu orçamento, sem comprometer a excelência.</p>
+                            </div>
+                        </div>
+                        <div class="value-item fade-in">
+                            <span class="value-icon">🚀</span>
+                            <div>
+                                <h4>Resultados Rápidos</h4>
+                                <p>Nossas estratégias são focadas em gerar resultados mensuráveis desde o primeiro mês.</p>
+                            </div>
+                        </div>
+                        <div class="value-item fade-in">
+                            <span class="value-icon">📱</span>
+                            <div>
+                                <h4>Expertise Comprovada</h4>
+                                <p>Já ajudamos diversos profissionais a transformarem sua presença digital com cases de sucesso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in">
+                    <div class="placeholder-image">
+                        <span>Transformamos sua Presença Digital</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Serviços -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-title">
-      <h2>Nossos Serviços</h2>
-      <p>Oferecemos soluções completas para sua presença digital, com estratégia e design inteligente.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Gestão de Instagram</h3>
-        <p>Criação de posts, stories e reels que engajam seu público e fortalecem sua marca com autenticidade.</p>
-      </div>
-      <div class="service-card">
-        <h3>Desenvolvimento Web</h3>
-        <p>Sites modernos, responsivos e otimizados para conversão.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Serviços -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Para Quem São Nossos Serviços?</h2>
+                <p>Atendemos diversos tipos de profissionais que desejam se destacar no ambiente digital</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏥</div>
+                    <h3>Profissionais da Saúde</h3>
+                    <p>Médicos, dentistas, psicólogos, nutricionistas, fisioterapeutas, enfermeiros e todos os profissionais da área da saúde que desejam construir autoridade e atrair mais pacientes.</p>
+                    <ul class="service-benefits">
+                        <li>Posts educativos</li>
+                        <li>Agendamento online</li>
+                        <li>Construção de autoridade</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">💅</div>
+                    <h3>Beleza & Estética</h3>
+                    <p>Cabeleireiras, esteticistas, lash designers, nail designers, maquiadores e todos os profissionais da beleza que querem mostrar seu trabalho e atrair mais clientes.</p>
+                    <ul class="service-benefits">
+                        <li>Portfólio visual</li>
+                        <li>Before & After</li>
+                        <li>Promoções estratégicas</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏢</div>
+                    <h3>Clínicas & Consultórios</h3>
+                    <p>Clínicas médicas, odontológicas, estéticas, veterinárias e consultórios em geral que precisam de uma presença digital profissional e convertível.</p>
+                    <ul class="service-benefits">
+                        <li>Site institucional</li>
+                        <li>Gestão de redes sociais</li>
+                        <li>Geração de leads</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">🛍️</div>
+                    <h3>Lojas & Comércio</h3>
+                    <p>Lojas de roupas, joias, calçados, acessórios e comércio em geral que desejam aumentar suas vendas através do marketing digital e e-commerce.</p>
+                    <ul class="service-benefits">
+                        <li>Catálogo digital</li>
+                        <li>Campanhas de vendas</li>
+                        <li>Tráfego pago</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Advogados & Contadores</h3>
+                    <p>Profissionais do direito e contabilidade que precisam construir credibilidade, educar seu público e atrair novos clientes qualificados.</p>
+                    <ul class="service-benefits">
+                        <li>Conteúdo jurídico</li>
+                        <li>Cases de sucesso</li>
+                        <li>Posicionamento estratégico</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌟</div>
+                    <h3>Demais Profissionais</h3>
+                    <p>Personal trainers, coaches, professores, consultores e qualquer profissional que queira se promover e crescer através do marketing digital.</p>
+                    <ul class="service-benefits">
+                        <li>Personal branding</li>
+                        <li>Conteúdo especializado</li>
+                        <li>Networking digital</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Portfólio -->
-<section class="portfolio" id="portfolio">
-  <div class="container">
-    <div class="section-title">
-      <h2>Nosso Portfólio</h2>
-      <p>Confira alguns dos nossos trabalhos realizados</p>
-    </div>
-    <div class="portfolio-simple">
-      <div class="portfolio-item-simple">
-        <h3>Site Desenvolvido</h3>
-        <p>Site profissional e responsivo desenvolvido para Enfermeira Domiciliar.</p>
-        <a href="https://wwwradomiciliarbauru.com.br<span>Ver Site</span></a>
-      </div>
-      <div class="portfolio-item-simple">
-        <h3>Instagram Gerenciado</h3>
-        <p>Perfil estratégico com conteúdo educativo e engajador para profissional da saúde.</p>
-        <a href="https://www.instagram.com/enfermeira.renatadias/"Instagram</span></a>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Portfólio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nosso Portfólio</h2>
+                <p>Confira alguns dos nossos trabalhos realizados</p>
+            </div>
+            
+            <div class="portfolio-simple">
+                <!-- Site Desenvolvido -->
+                <div class="portfolio-item-simple fade-in">
+                    <div class="portfolio-icon">💻</div>
+                    <h3>Site Desenvolvido por Nós</h3>
+                    <p>Site profissional e responsivo desenvolvido para Enfermeira Domiciliar, com design moderno e otimizado para conversão.</p>
+                    <a href="https://www.enfermeiradomiciliarbauru.com.br" class="btn-portfolio" target="_blank">
+                        <span>Ver Site</span>
+                    </a>
+                </div>
+                
+                <!-- Instagram Gerenciado -->
+                <div class="portfolio-item-simple fade-in">
+                    <div class="portfolio-icon">📱</div>
+                    <h3>Instagram Gerenciado por Nós</h3>
+                    <p>Perfil estratégico com conteúdo educativo e engajador para profissional da saúde, aumentando autoridade e visibilidade.</p>
+                    <a href="https://www.instagram.com/enfermeira.renatadias/" class="btn-portfolio" target="_blank">
+                        <span>Ver Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Preços -->
-<section class="pricing" id="pricing">
-  <div class="container">
-    <div class="section-title">
-      <h2>Nossos Planos</h2>
-      <div class="promo-badge">Promoção de Inauguração</div>
-    </div>
-    <div class="pricing-notice"><p>💜 <strong>Para fechar qualquer pacote, entre em contato pelo WhatsApp!</strong></p></div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <h3>Desenvolvimento de Site</h3>
-        <div class="price">R$ 45</div>
-        https://wa.me/5511910189735?text=Olá! Gostaria de criar um site por R$45<span>Contratar</span></a>
-      </div>
-      <div class="pricing-card popular">
-        <div class="popular-badge">Mais Popular</div>
-        <h3>Pacote Silver</h3>
-        <div class="price">R$ 170<span>/mês</span></div>
-        https://wa.me/5511910189735?text=Olá! Gostaria de contratar o Pacote Silver por R$170/mês<span>Contratar</span></a>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Preços -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Planos</h2>
+                <p>Preços especiais de inauguração por tempo limitado!</p>
+                <div class="promo-badge">Promoção de Inauguração</div>
+            </div>
+            
+            <div class="pricing-notice fade-in">
+                <p>💜 <strong>Para fechar qualquer pacote, entre em contato pelo WhatsApp!</strong></p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Desenvolvimento de Site</h3>
+                        <div class="price">R$ 45</div>
+                        <div class="promo-tag">Promoção</div>
+                    </div>
+                    <ul class="features">
+                        <li>Site responsivo e moderno</li>
+                        <li>Design personalizado</li>
+                        <li>Otimizado para SEO</li>
+                        <li>Entrega em 7 dias úteis</li>
+                        <li>Suporte por 30 dias</li>
+                        <li>Domínio e hospedagem inclusos*</li>
+                    </ul>
+                    <a href="https://wa.me/5511910189735?text=Olá! Gostaria de criar um site por R$45" class="btn-pricing" target="_blank">
+                        <span>Contratar</span>
+                    </a>
+                </div>
+                
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Pacote Stories</h3>
+                        <div class="price">R$ 50</div>
+                        <div class="promo-tag">Promoção</div>
+                    </div>
+                    <ul class="features">
+                        <li>10 Stories criativos</li>
+                        <li>Design personalizado</li>
+                        <li>Entrega em 3 dias úteis</li>
+                        <li>Revisões inclusas</li>
+                        <li>Copywriting estratégico</li>
+                        <li>Artes em alta qualidade</li>
+                    </ul>
+                    <a href="https://wa.me/5511910189735?text=Olá! Gostaria de contratar o Pacote Stories por R$50" class="btn-pricing" target="_blank">
+                        <span>Contratar</span>
+                    </a>
+                </div>
+                
+                <div class="pricing-card popular fade-in">
+                    <div class="popular-badge">Mais Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pacote Silver</h3>
+                        <div class="price">R$ 170<span>/mês</span></div>
+                        <div class="promo-tag">Promoção</div>
+                    </div>
+                    <ul class="features">
+                        <li>3 posts no feed por semana</li>
+                        <li>Criação de site básico</li>
+                        <li>Gestão de conteúdo</li>
+                        <li>Relatório mensal</li>
+                        <li>Suporte prioritário</li>
+                        <li>Estratégia personalizada</li>
+                    </ul>
+                    <a href="https://wa.me/5511910189735?text=Olá! Gostaria de contratar o Pacote Silver por R$170/mês" class="btn-pricing" target="_blank">
+                        <span>Contratar</span>
+                    </a>
+                </div>
+                
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Pacote Gold</h3>
+                        <div class="price">R$ 210<span>/mês</span></div>
+                        <div class="promo-tag">Promoção</div>
+                    </div>
+                    <ul class="features">
+                        <li>3 posts no feed por semana</li>
+                        <li>3 stories por semana</li>
+                        <li>Criação de site profissional</li>
+                        <li>Suporte prioritário</li>
+                        <li>Análise de métricas</li>
+                        <li>Consultoria mensal</li>
+                    </ul>
+                    <a href="https://wa.me/5511910189735?text=Olá! Gostaria de contratar o Pacote Gold por R$210/mês" class="btn-pricing" target="_blank">
+                        <span>Contratar</span>
+                    </a>
+                </div>
+                
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Pacote Diamond</h3>
+                        <div class="price">R$ 300<span>/mês</span></div>
+                        <div class="promo-tag">Promoção</div>
+                    </div>
+                    <ul class="features">
+                        <li>5 posts no feed por semana</li>
+                        <li>5 stories por semana</li>
+                        <li>Criação de site premium</li>
+                        <li>Consultoria estratégica mensal</li>
+                        <li>Gestão completa de tráfego</li>
+                        <li>Relatórios detalhados</li>
+                    </ul>
+                    <a href="https://wa.me/5511910189735?text=Olá! Gostaria de contratar o Pacote Diamond por R$300/mês" class="btn-pricing" target="_blank">
+                        <span>Contratar</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="pricing-footer fade-in">
+                <p>* Domínio e hospedagem inclusos no primeiro ano. Preços podem variar conforme complexidade do projeto.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- Contato -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>Entre em Contato</h2>
-    <p>Pronto para fortalecer suas raízes digitais? Fale conosco!</p>
-    https://wa.me/5511910189735<span>(11) 91018-9735</span></a>
-    mailto:digitalraiza@gmail.com<span>digitalraiza@gmail.com</span></a>
-  </div>
-</section>
+    <!-- Contato -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Pronto para fortalecer suas raízes digitais? Fale conosco!</p>
+            </div>
+            <div class="contact-simple">
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Atendimento rápido e personalizado</p>
+                    <a href="https://wa.me/5511910189735" class="btn-contact" target="_blank">
+                        <span>(11) 91018-9735</span>
+                    </a>
+                </div>
+                
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">📧</div>
+                    <h3>E-mail</h3>
+                    <p>Para orçamentos e dúvidas</p>
+                    <a href="mailto:digitalraiza@gmail.com" class="btn-contact">
+                        <span>digitalraiza@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer -->
-<footer>
-  <div class="footer-grid">
-    <div>
-      <h4>Raiza Digital</h4>
-      <p>Cultivamos sua presença digital desde a raiz, com estratégia inteligente e design que converte.</p>
-    </div>
-    <div>
-      <h4>Serviços</h4>
-      <ul>
-        <li>#servicesGestão de Instagram</a></li>
-        <li>#servicesDesenvolvimento Web</a></li>
-        <li>#pricingPlanos e Preços</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Links Rápidos</h4>
-      <ul>
-        <li>#homeInício</a></li>
-        <li>#aboutSobre</a></li>
-        <li>#portfolioPortfólio</a></li>
-        <li>#contactContato</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2024 Raiza Digital. Todos os direitos reservados.
-  </div>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Raiza Digital</h4>
+                    <p>Cultivamos sua presença digital desde a raiz, com estratégia inteligente e design que converte.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Gestão de Instagram</a></li>
+                        <li><a href="#services">Desenvolvimento Web</a></li>
+                        <li><a href="#pricing">Planos e Preços</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#pricing">Preços</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Raiza Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
