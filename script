@@ -1,0 +1,39 @@
+// Menu mobile
+document.querySelector('.mobile-menu').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um link (em dispositivos móveis)
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelector('nav').classList.remove('active');
+    });
+});
+
+// Smooth scroll para links internos
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Formulário de contato
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Aqui você normalmente enviaria os dados para um servidor
+    // Por enquanto, vamos apenas mostrar uma mensagem de sucesso
+    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+    this.reset();
+});
