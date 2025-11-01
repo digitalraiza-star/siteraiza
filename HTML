@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raiza - Estratégia Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-profundo: #2F855A;
+            --verde-claro: #A3D9A5;
+            --branco: #FFFFFF;
+            --cinza-claro: #F5F5F5;
+            --preto: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--preto);
+            background-color: var(--branco);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--branco);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--verde-profundo);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--preto);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--verde-profundo);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--verde-profundo), var(--verde-claro));
+            color: var(--branco);
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--branco);
+            color: var(--verde-profundo);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--branco);
+            border-color: var(--branco);
+        }
+        
+        /* Services */
+        .services {
+            padding: 100px 0;
+            background-color: var(--cinza-claro);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--verde-profundo);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--branco);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--verde-profundo);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--verde-profundo);
+        }
+        
+        /* About */
+        .about {
+            padding: 100px 0;
+            background-color: var(--branco);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--verde-profundo);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .values-list {
+            margin-top: 30px;
+        }
+        
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .value-icon {
+            margin-right: 15px;
+            color: var(--verde-profundo);
+            font-size: 1.2rem;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Portfolio */
+        .portfolio {
+            padding: 100px 0;
+            background-color: var(--cinza-claro);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(47, 133, 90, 0.9), transparent);
+            color: var(--branco);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--branco);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--verde-profundo);
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            margin-right: 15px;
+            color: var(--verde-profundo);
+            font-size: 1.2rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-form button {
+            background: linear-gradient(135deg, var(--verde-profundo), var(--verde-claro));
+            color: var(--branco);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-form button:hover {
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--verde-profundo);
+            color: var(--branco);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--branco);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: var(--cinza-claro);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--verde-claro);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--branco);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--verde-claro);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: var(--cinza-claro);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <span>Raiza</span>
+            </div>
+            <div class="mobile-menu">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Cultivamos sua presença digital desde a raiz</h1>
+            <p>Crescimento enraizado no digital para marcas que querem florescer com autenticidade e planejamento.</p>
+            <a href="#contact" class="btn">Solicitar Orçamento</a>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos soluções completas para sua presença digital, com estratégia e design inteligente.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Gestão de Instagram</h3>
+                    <p>Criação de posts, stories e reels que engajam seu público e fortalecem sua marca com autenticidade.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criação de sites simples, funcionais e responsivos que convertem visitantes em clientes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Consultoria Digital</h3>
+                    <p>Estratégias personalizadas para fortalecer sua presença online e alcançar seus objetivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre a Raiza</h2>
+                    <p>Assim como uma raiz forte sustenta uma árvore, nossa empresa fornece as bases digitais necessárias para o crescimento sustentável do seu negócio.</p>
+                    <p>Combinamos criatividade e estratégia para desenvolver soluções digitais que não apenas impressionam visualmente, mas também geram resultados tangíveis.</p>
+                    
+                    <div class="values-list">
+                        <h3>Nossos Valores</h3>
+                        <div class="value-item">
+                            <span class="value-icon">🌱</span>
+                            <div>
+                                <h4>Enraizamento</h4>
+                                <p>Construção sólida e duradoura da presença digital.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">💚</span>
+                            <div>
+                                <h4>Acessibilidade</h4>
+                                <p>Soluções que cabem no bolso, sem perder valor.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">✨</span>
+                            <div>
+                                <h4>Autenticidade</h4>
+                                <p>Cada projeto nasce da essência do cliente.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🎨</span>
+                            <div>
+                                <h4>Simplicidade Criativa</h4>
+                                <p>Beleza funcional, sem excessos.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">📈</span>
+                            <div>
+                                <h4>Estratégia</h4>
+                                <p>Planejamento que gera frutos reais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <!-- Imagem ilustrativa - em um site real, substituir por imagem real -->
+                    <div style="background: linear-gradient(135deg, var(--verde-profundo), var(--verde-claro)); height: 500px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                        Imagem Representativa
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nosso Portfólio</h2>
+                <p>Confira alguns dos nossos trabalhos recentes que demonstram nossa capacidade de transformar ideias em realidade digital.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <!-- Imagem de exemplo - substituir por imagens reais -->
+                    <div style="background: linear-gradient(135deg, var(--verde-profundo), var(--verde-claro)); height: 250px;"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Campanha Instagram - Moda</h3>
+                        <p>Posts e stories para marca de moda sustentável</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div style="background: linear-gradient(135deg, var(--verde-profundo), #7AB893); height: 250px;"></div>
+                    <div class="portfolio-overlay">
+                        <h3>Site Institucional - Consultoria</h3>
+                        <p>Website para empresa de consultoria empresarial</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div style="background: linear-gradient(135deg, var(--verde-claro), var(--verde-profundo)); height: 250px;"></div>
+                    <div class="portfolio-overlay">
+                        <h3>E-commerce - Cosméticos</h3>
+                        <p>Loja virtual completa para marca de cosméticos naturais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Pronto para fortalecer suas raízes digitais? Entre em contato e vamos conversar sobre o seu projeto.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Vamos Conversar</h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <span class="contact-icon">📧</span>
+                            <span>contato@raizadigital.com</span>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-icon">📞</span>
+                            <span>(11) 99999-9999</span>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-icon">📍</span>
+                            <span>São Paulo, Brasil</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Seu nome" required>
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <input type="text" placeholder="Assunto" required>
+                        <textarea placeholder="Sua mensagem" required></textarea>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Raiza - Estratégia Digital</h4>
+                    <p>Cultivamos sua presença digital desde a raiz, com estratégia e design inteligente.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#">Gestão de Instagram</a></li>
+                        <li><a href="#">Desenvolvimento Web</a></li>
+                        <li><a href="#">Consultoria Digital</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Inscreva-se para receber nossas novidades e dicas de marketing digital.</p>
+                    <form>
+                        <input type="email" placeholder="Seu e-mail" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+                        <button type="submit" style="background: var(--verde-claro); color: var(--verde-profundo); border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: 600;">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Raiza - Estratégia Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link (em dispositivos móveis)
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
